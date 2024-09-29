@@ -13,7 +13,7 @@ const AboutUs = () => {
         proveerte la mejor experiencia para reservar habitaciones en hoteles a lo largo del mundo
       </p>
 
-      <h2 className="text-3xl font-extrabold text-brand mb-2">Our Vision</h2>
+      <h2 className="text-3xl font-extrabold text-brand mb-2">Nuestra visión</h2>
       <p className="text-lg mb-8">
         En <span className="text-brand">EASY STAY</span>, donde nuestro objetivo es un mundo en el que
         cada viajero encuentre las herramientas perfectas que satisfagan sus necesidades y preferencias.
