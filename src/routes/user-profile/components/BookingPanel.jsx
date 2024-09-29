@@ -31,7 +31,7 @@ const BookingPanel = ({ bookings }) => {
                         d="M8 7V3m8 4V3m-4 4V3m0 4v8m-4-4h8"
                       />
                     </svg>
-                    Booking Date: {booking.bookingDate}
+                    Fecha Reserva: {booking.bookingDate}
                   </p>
                   <p className="flex items-center text-sm text-gray-500">
                     <svg

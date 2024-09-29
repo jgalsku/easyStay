@@ -14,25 +14,25 @@ export function makeServer({ environment = 'development' } = {}) {
     seeds(server) {
       server.create('user', {
         id: '1',
-        email: 'user1@example.com',
-        password: 'password1',
-        firstName: 'John',
-        lastName: 'Doe',
-        fullName: 'John Doe',
+        email: 'usuario1@ejemplo.com',
+        password: 'contraseña1',
+        firstName: 'Juan',
+        lastName: 'Pérez',
+        fullName: 'Juan Pérez',
         phone: '1234567890',
-        country: 'USA',
+        country: 'EEUU',
         isPhoneVerified: true,
         isEmailVerified: true,
       });
       server.create('user', {
         id: '2',
-        email: 'user2@example.com',
-        password: 'password2',
-        firstName: 'Jane',
-        lastName: 'Doe',
-        fullName: 'Jane Doe',
+        email: 'usuario2@ejemplo.com',
+        password: 'contraseña2',
+        firstName: 'Ana',
+        lastName: 'Pérez',
+        fullName: 'Ana Pérez',
         phone: '0987654321',
-        country: 'UK',
+        country: 'Reino Unido',
         isPhoneVerified: false,
         isEmailVerified: true,
       });
@@ -41,7 +41,7 @@ export function makeServer({ environment = 'development' } = {}) {
     routes() {
       this.namespace = 'api';
 
-      // Add a logged-in user state to the server
+      // Añadir un estado de usuario conectado al servidor
       let loggedInUser = null;
 
       this.passthrough('http://localhost:4000/*');
@@ -106,7 +106,7 @@ export function makeServer({ environment = 'development' } = {}) {
             404,
             {},
             {
-              errors: ['User not found or invalid credentials'],
+              errors: ['Usuario no encontrado o credenciales inválidas'],
               data: {},
             }
           );
@@ -121,7 +121,7 @@ export function makeServer({ environment = 'development' } = {}) {
           {
             errors: [],
             data: {
-              status: 'User logged out successfully',
+              status: 'Usuario desconectado exitosamente',
             },
           }
         );
@@ -135,7 +135,7 @@ export function makeServer({ environment = 'development' } = {}) {
           return new Response(
             409,
             {},
-            { errors: ['User already exists with that email'] }
+            { errors: ['El usuario ya existe con ese correo electrónico'] }
           );
         } else {
           // Create a new user
@@ -169,7 +169,7 @@ export function makeServer({ environment = 'development' } = {}) {
             {
               errors: [],
               data: {
-                status: 'Profile updated successfully',
+                status: 'Perfil actualizado exitosamente',
               },
             }
           );
@@ -178,7 +178,7 @@ export function makeServer({ environment = 'development' } = {}) {
             404,
             {},
             {
-              errors: ['User not found'],
+              errors: ['Usuario no encontrado'],
               data: {},
             }
           );
@@ -196,7 +196,7 @@ export function makeServer({ environment = 'development' } = {}) {
                 {
                   bookingId: 'BKG123',
                   bookingDate: '2024-01-10',
-                  hotelName: 'Seaside Resort',
+                  hotelName: 'Resort Frente al Mar',
                   checkInDate: '2024-01-20',
                   checkOutDate: '2024-01-25',
                   totalFare: '₹14,500',
@@ -204,7 +204,7 @@ export function makeServer({ environment = 'development' } = {}) {
                 {
                   bookingId: 'BKG124',
                   bookingDate: '2024-01-03',
-                  hotelName: 'Mountain Retreat',
+                  hotelName: 'Retiro en la Montaña',
                   checkInDate: '2024-02-15',
                   checkOutDate: '2024-02-20',
                   totalFare: '₹5,890',
@@ -212,7 +212,7 @@ export function makeServer({ environment = 'development' } = {}) {
                 {
                   bookingId: 'BKG125',
                   bookingDate: '2024-01-11',
-                  hotelName: 'City Central Hotel',
+                  hotelName: 'Hotel Central Ciudad',
                   checkInDate: '2024-03-01',
                   checkOutDate: '2024-03-05',
                   totalFare: '₹21,700',
@@ -267,7 +267,7 @@ export function makeServer({ environment = 'development' } = {}) {
             errors: [],
             data: {
               name: result.title,
-              cancellationPolicy: 'Free cancellation 1 day prior to stay',
+              cancellationPolicy: 'Cancelación gratuita 1 día antes de la estadía',
               checkInTime: '12:00 PM',
               checkOutTime: '10:00 AM',
               currentNightRate: result.price,

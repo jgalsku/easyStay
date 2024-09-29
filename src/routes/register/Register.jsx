@@ -111,7 +111,7 @@ const Register = () => {
                   <div className="mb-6">
                     <Field
                       name="confirmPassword"
-                      placeholder="Confirm Password"
+                      placeholder="Confirmar Password"
                       autoComplete="new-password"
                       className={`${errors.confirmPassword && touched.confirmPassword ? 'border-red-500' : ''} border block w-full px-4 py-3 mb leading-tight text-gray-700 bg-gray-200 rounded appearance-none focus:outline-none focus:bg-white`}
                     />
@@ -121,14 +121,14 @@ const Register = () => {
                       type="submit"
                       className="w-full px-4 py-2 font-bold text-white rounded bg-brand hover:bg-blue-700 focus:outline-none focus:shadow-outline"
                     >
-                      Register
+                      Registrarme
                     </button>
                   </div>
                   <Link
                     to="/login"
                     className="inline-block w-full text-lg text-center text-gray-500 align-baseline hover:text-blue-800"
                   >
-                    Back to login
+                    Volver al login
                   </Link>
                   {showToast && (
                     <Toast
