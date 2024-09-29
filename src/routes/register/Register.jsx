@@ -62,17 +62,15 @@ const Register = () => {
                 <div className="w-full max-w-lg p-4 shadow-md md:p-10">
                   <div className="mb-10 text-center">
                     <h2 className="text-3xl font-extrabold text-brand">
-                      Join the Adventure!
+                      Crear cuenta
                     </h2>
-                    <p className="text-gray-500">
-                      Create your account and start your journey with us
-                    </p>
+
                   </div>
                   <div className="flex flex-wrap mb-6 -mx-3">
                     <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0 relative">
                       <Field
                         name="firstName"
-                        placeholder="First Name"
+                        placeholder="Primer nombre"
                         autoComplete="given-name"
                         className={`${errors.firstName && touched.firstName ? 'border-red-500' : ''} border block w-full px-4 py-3 mb leading-tight text-gray-700 bg-gray-200 rounded appearance-none focus:outline-none focus:bg-white`}
                       />
@@ -80,7 +78,7 @@ const Register = () => {
                     <div className="w-full px-3 md:w-1/2">
                       <Field
                         name="lastName"
-                        placeholder="Last Name"
+                        placeholder="Apellido"
                         autoComplete="family-name"
                         className={`${errors.lastName && touched.lastName ? 'border-red-500' : ''} border block w-full px-4 py-3 mb leading-tight text-gray-700 bg-gray-200 rounded appearance-none focus:outline-none focus:bg-white`}
                       />
@@ -97,7 +95,7 @@ const Register = () => {
                   <div className="mb-6">
                     <Field
                       name="phoneNumber"
-                      placeholder="Phone"
+                      placeholder="Número telefónico"
                       autoComplete="tel"
                       className={`${errors.phoneNumber && touched.phoneNumber ? 'border-red-500' : ''} border block w-full px-4 py-3 mb leading-tight text-gray-700 bg-gray-200 rounded appearance-none focus:outline-none focus:bg-white`}
                     />

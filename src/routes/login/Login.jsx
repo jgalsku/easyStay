@@ -73,11 +73,8 @@ const Login = () => {
           >
             <div className="text-center mb-10">
               <h2 className="text-3xl font-extrabold text-brand">
-                Welcome Back
+                Bienvenido 
               </h2>
-              <p className="text-gray-500">
-                Log in to continue to your account
-              </p>
             </div>
             <div className="mb-6">
               <input
@@ -114,7 +111,7 @@ const Login = () => {
                   type="submit"
                   className="bg-brand hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
                 >
-                  Log In
+                  Ingresar
                 </button>
               </div>
               <div className="flex flex-wrap justify-center my-3 w-full">
@@ -122,15 +119,13 @@ const Login = () => {
                   to="/forgot-password"
                   className="inline-block align-baseline text-md text-gray-500 hover:text-blue-800 text-right"
                 >
-                  Forgot your password?
+                  ¿Olvidaste tu contraseña?
                 </Link>
               </div>
               <div className="relative">
                 <div className="absolute left-0 right-0 flex justify-center items-center">
                   <div className="border-t w-full absolute"></div>
-                  <span className="bg-white px-3 text-gray-500 z-10">
-                    New to Stay Booker?
-                  </span>
+
                 </div>
               </div>
               <div className="flex flex-wrap justify-center my-3 w-full mt-12">
@@ -138,17 +133,12 @@ const Login = () => {
                   to="/register"
                   className="inline-block align-baseline font-medium text-md text-brand hover:text-blue-800 text-right"
                 >
-                  Create an account
+                  Crear una cuenta
                 </Link>
               </div>
             </div>
           </form>
         </div>
-      </div>
-      <div className="bg-slate-50 flex flex-col mx-auto w-full max-w-lg px-4">
-        <small className="text-slate-600">test user details</small>
-        <small className="text-slate-600">Email: user1@example.com</small>
-        <small className="text-slate-600">Password: password1</small>
       </div>
     </>
   );

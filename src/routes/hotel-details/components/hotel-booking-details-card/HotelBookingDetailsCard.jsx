@@ -36,16 +36,16 @@ const HotelBookingDetailsCard = ({ hotelCode }) => {
 
   // State for selected room, guests, and rooms
   const [selectedRoom, setSelectedRoom] = useState({
-    value: '1 King Bed Standard Non Smoking',
-    label: '1 King Bed Standard Non Smoking',
+    value: '1 Cama King No fumadores',
+    label: '1 Cama King No fumadores',
   });
   const [selectedGuests, setSelectedGuests] = useState({
     value: 2,
-    label: '2 guests',
+    label: '2 invitados',
   });
   const [selectedRooms, setSelectedRooms] = useState({
     value: 1,
-    label: '1 room',
+    label: '1 habitación',
   });
 
   // State for pricing and booking details
@@ -57,16 +57,16 @@ const HotelBookingDetailsCard = ({ hotelCode }) => {
   // Options for guests and rooms
   const guestOptions = Array.from(
     { length: bookingDetails.maxGuestsAllowed },
-    (_, i) => ({ value: i + 1, label: `${i + 1} guest` })
+    (_, i) => ({ value: i + 1, label: `${i + 1} invitado` })
   );
   const roomNumberOptions = Array.from(
     { length: bookingDetails.maxRoomsAllowedPerGuest },
-    (_, i) => ({ value: i + 1, label: `${i + 1} room` })
+    (_, i) => ({ value: i + 1, label: `${i + 1} habitación` })
   );
   const roomOptions = [
     {
-      value: '1 King Bed Standard Non Smoking',
-      label: '1 King Bed Standard Non Smoking',
+      value: '1 Cama King No fumadores',
+      label: '1 Cama King No fumadores',
     },
   ];
 
@@ -124,7 +124,7 @@ const HotelBookingDetailsCard = ({ hotelCode }) => {
 
   const onBookingConfirm = () => {
     if (!dateRange[0].startDate || !dateRange[0].endDate) {
-      setErrorMessage('Please select check-in and check-out dates.');
+      setErrorMessage('Selecciona fechas de check-in.');
       return;
     }
     const checkIn = format(dateRange[0].startDate, 'dd-MM-yyyy');

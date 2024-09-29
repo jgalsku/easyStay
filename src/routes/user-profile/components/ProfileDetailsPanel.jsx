@@ -77,7 +77,7 @@ const ProfileDetailsPanel = ({ userDetails }) => {
       setNationality(userDetails.country);
       setToastMessage({
         type: 'error',
-        message: 'Oops, something went wrong. Please try again later.',
+        message: 'Intente de nuevo más tarde',
       });
     }
 
@@ -117,12 +117,9 @@ const ProfileDetailsPanel = ({ userDetails }) => {
     <div className="bg-white shadow sm:rounded-lg flex flex-col">
       <div className="px-4 py-5 sm:px-6">
         <h3 className="text-xl leading-6 font-medium text-gray-900">
-          Personal details
+          Información personal
         </h3>
-        <p className="mt-1 max-w-2xl text-gray-500">
-          Keep your details current to ensure seamless communication and
-          services
-        </p>
+
       </div>
       <div className="border-t border-gray-200">
         <dl>
@@ -130,23 +127,23 @@ const ProfileDetailsPanel = ({ userDetails }) => {
             // Editable fields
             <>
               <TextField
-                label="Firstname"
+                label="Nombre"
                 value={firstName}
                 onChange={setFirstName}
               />
               <TextField
-                label="Lastname"
+                label="Apellido"
                 value={lastName}
                 onChange={setLastName}
               />
               <TextField
-                label="Phone number"
+                label="Número telefónico"
                 type="tel"
                 value={phoneNumber}
                 onChange={setPhoneNumber}
               />
               <TextField
-                label="Date of birth"
+                label="Fecha de nacimiento"
                 type="date"
                 value={dateOfBirth}
                 onChange={setDateOfBirth}
@@ -164,23 +161,23 @@ const ProfileDetailsPanel = ({ userDetails }) => {
           ) : (
             // Display fields
             <>
-              <DisplayField label="Firstname" value={firstName} />
-              <DisplayField label="Lastname" value={lastName} />
+              <DisplayField label="Nombre" value={firstName} />
+              <DisplayField label="Apellido" value={lastName} />
               <DisplayField
-                label="Email address"
+                label="Email"
                 value={email}
                 verified={isEmailVerified}
               />
               <DisplayField
-                label="Phone number"
+                label="Número telefónico"
                 value={phoneNumber || 'Add your phone number'}
                 verified={isPhoneVerified}
               />
               <DisplayField
-                label="Date of birth"
+                label="Fecha de nacimiento"
                 value={dateOfBirth || 'Enter your date of birth'}
               />
-              <DisplayField label="Nationality" value={nationality} />
+              <DisplayField label="Nacionalidad" value={nationality} />
             </>
           )}
         </dl>

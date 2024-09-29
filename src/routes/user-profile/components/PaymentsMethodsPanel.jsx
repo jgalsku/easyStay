@@ -37,7 +37,7 @@ const PaymentMethodsPanel = ({
     <div className="bg-white shadow overflow-hidden sm:rounded-md">
       {userPaymentMethodsData.data?.length === 0 ? (
         <div className="text-center py-6 text-gray-500">
-          You have no saved payment methods.
+          No tiene métodos de pago guardados.
         </div>
       ) : (
         <ul className="divide-y divide-gray-200">
@@ -75,10 +75,10 @@ const PaymentMethodsPanel = ({
                     {method.cardType}
                   </h3>
                   <p className="text-sm text-gray-500">
-                    Ending in {method.cardNumber}
+                    Termina {method.cardNumber}
                   </p>
                   <p className="text-sm text-gray-500">
-                    Expires {method.expiryDate}
+                    Expira {method.expiryDate}
                   </p>
                 </div>
               )}
@@ -90,13 +90,13 @@ const PaymentMethodsPanel = ({
                       onClick={handleSave}
                       className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-white bg-brand hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mr-2"
                     >
-                      Save
+                      Guardar
                     </button>
                     <button
                       onClick={handleCancel}
                       className="inline-flex items-center px-2.5 py-1.5 border border-gray-300 text-xs font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     >
-                      Cancel
+                      Cancelar
                     </button>
                   </>
                 ) : (
@@ -104,7 +104,7 @@ const PaymentMethodsPanel = ({
                     onClick={() => handleEdit(index)}
                     className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-white bg-brand  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   >
-                    Edit
+                    Editar
                   </button>
                 )}
               </div>

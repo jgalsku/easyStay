@@ -61,7 +61,7 @@ const NavbarItems = ({ isAuthenticated, onHamburgerMenuToggle }) => {
           }`}
           onClick={onHamburgerMenuToggle}
         >
-          Hotels
+          Hoteles
         </Link>
       </li>
       <li className="p-4 hover:bg-blue-900 md:hover:bg-brand">
@@ -72,7 +72,7 @@ const NavbarItems = ({ isAuthenticated, onHamburgerMenuToggle }) => {
           }`}
           onClick={onHamburgerMenuToggle}
         >
-          About us
+          Sobre nosotros
         </Link>
       </li>
       <li
@@ -88,7 +88,7 @@ const NavbarItems = ({ isAuthenticated, onHamburgerMenuToggle }) => {
             }`}
             onClick={onHamburgerMenuToggle}
           >
-            Login/Register
+            Login/Registro
           </Link>
         )}
       </li>
